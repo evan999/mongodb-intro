@@ -11,13 +11,14 @@
     "url": "git+https://github.com/evan999/mongodb-intro.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "evan999",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/evan999/mongodb-intro/issues"
   },
   "homepage": "https://github.com/evan999/mongodb-intro#readme",
   "dependencies": {
-    "mongoose": "^5.2.15"
+    "mongoose": "^5.2.15",
+    "nodemon": "^1.18.4"
   }
 }
