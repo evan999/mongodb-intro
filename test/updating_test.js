@@ -10,7 +10,7 @@ describe('Updating records', function(done){
     beforeEach(function(done){
         char = new MarioChar({
            name: 'Mario',
-           weight:
+           weight: 50
         });
         
         char.save().then(function(){
