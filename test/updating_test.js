@@ -3,7 +3,7 @@ const assert = require('assert');
 const MarioChar = require('../models/mariochar');
 
 // Describe tests
-describe('Finding records', function(done){
+describe('Updating records', function(done){
     
     var char;
     
@@ -18,14 +18,17 @@ describe('Finding records', function(done){
     })
     
     // Create tests
-    it('Finds one record by ID from the database', function(done){
+    it('Updates one record in the database', function(done){
         
-        MarioChar.findOne({ _id: char._id}).then(function(result){
-            assert(result._id.toString() === char._id.toString());
-            done();
+        MarioChar.findOneAndUpdate({name: 'Mario'}, {name: 'Luigi'}).then(function(){
+           MarioChar.findOne({_id: char._id}).then(function(result){
+               assert(result.name === 'Luigi');
+               done();
+           });
         });
-        
-        
+       
     });
-    
+        
+        
 });
+    

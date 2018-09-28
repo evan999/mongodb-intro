@@ -13,13 +13,12 @@ describe('Deleting records', function(done){
         });
         
         char.save().then(function(){
-            assert(char.isNew === false);
             done();
         });
     })
     
     // Create tests
-    it('Deletes one record by ID from the database', function(done){
+    it('Deletes one record in the database', function(done){
         
         MarioChar.findOneAndRemove({name: 'Mario'}).then(function(){
             MarioChar.findOne({name: 'Mario'}).then(function(result){
